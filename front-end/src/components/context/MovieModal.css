@@ -1,0 +1,175 @@
+.modal {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  background: #111;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 400ms ease-in-out 2s;
+  animation: fadeIn 400ms;
+}
+.modal__poster-img {
+  width: 100%;
+  height: auto;
+}
+.modal__content {
+  padding: 40px;
+}
+
+.modal__btn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.modal__title {
+  padding: 0;
+  font-size: 40px;
+  margin: 16px 0;
+}
+.modal__details {
+  font-weight: 600;
+  font-size: 18px;
+}
+.modal__overview {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.modal__user-perc {
+  color: #46d369;
+}
+.modal::-webkit-scrollbar {
+  display: none;
+  visibility: hidden;
+}
+
+.modal {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.wrapper-modal {
+  z-index: -1;
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.presentation {
+  z-index: 1200;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.puntua-div-in {
+  margin: 10px 0 25px 0;
+}
+.puntua-div-in {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  overflow: initial !important;
+}
+.puntua-div-in,
+.puntua-lavel {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+}
+.puntua-div-in input {
+  width: 35px;
+}
+.puntua-lavel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1em;
+}
+.puntua-lavel {
+  z-index: 100;
+  background-color: #fff;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.puntua-div-in input:last-of-type:checked ~ label {
+  color: #fff !important;
+  background-color: #00b8de;
+}
+
+.banner__buttons {
+  display: flex;
+  flex-direction: row;
+}
+.banner__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding: 0.4rem 1.8rem 0.4rem 1rem;
+  margin-right: 1rem;
+}
+.delete {
+  background-color: #a71818 !important;
+}
+.banner__buttons:hover {
+  color: #000;
+  background-color: rgba(170, 170, 170, 0.9);
+  transition: all 0.2s;
+}
+@media screen and (max-height: 768px) {
+  .wrapper-modal {
+    align-items: unset;
+    padding-top: 2rem;
+  }
+  .modal {
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal__overview {
+    font-size: 16px;
+  }
+  .modal__details {
+    font-size: 16px;
+  }
+  .wrapper-modal {
+    padding: 0;
+  }
+  .modal {
+    overflow-y: scroll !important;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
