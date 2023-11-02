@@ -39,7 +39,7 @@ const App = () => {
         fetchUrl={requests.fetchComedyMovies}
       />
       <Row
-        title="Peliculas de Horros"
+        title="Peliculas de Horror"
         id="HM"
         fetchUrl={requests.fetchHorrorMovies}
       />
